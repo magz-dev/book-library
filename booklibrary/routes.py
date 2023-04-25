@@ -5,4 +5,4 @@ from booklibrary.models import Category, Book
 
 @app.route("/")
 def home():
-    return render_template("base.html")
+    return render_template("books.html")
