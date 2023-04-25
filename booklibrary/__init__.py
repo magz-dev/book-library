@@ -12,4 +12,5 @@ app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL")
 
 db = SQLAlchemy(app)
 
+
 from booklibrary import routes  # noqas
