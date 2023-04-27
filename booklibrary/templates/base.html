@@ -26,19 +26,14 @@ rel="stylesheet"
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="#">Home</a>
+                <a href="{{ url_for('home') }}">Home</a>
               </li>
               <li class="breadcrumb-item">
-                <a href="#">Library</a>
-              </li>
-              <li class="breadcrumb-item active" aria-current="page">
-                <a href="#">Data</a>
-              </li>
+                <a href="{{ url_for('categories') }}">Library</a>
             </ol>
           </nav>
         </div>
       </nav>
-  
 <main class="container">
     {% block content %}
     {% endblock %}
