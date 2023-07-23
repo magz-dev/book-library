@@ -6,7 +6,6 @@ class Category(db.Model):
     category_name = db.Column(db.String(20), unique=True, nullable=False)
     books = db.relationship("Task", backref="category", cascade="all, delete")
  
-
     def __repr__(self):
         # represent itself in the form of a string
         return self.category_name
@@ -18,7 +17,6 @@ class Book(db.Model):
     book_author = db.Column(db.String(30), nullable=False)
     current_status = db.Column(db.Boolean, nullable=False)
     category_id = db.Column(db.Integer, db.ForeignKey("category.id", ondelete="CASCADE"), nullable=False)
-
 
     def __repr__(self):
         # represent itself in the form of a string
