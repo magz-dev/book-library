@@ -24,6 +24,8 @@ def add_category():
     return render_template('add_category.html')
 
 
-@app.route("/edit_category", methods=["GET", "POST"])
-def edit_category():
-    return render_template("edit_category.html")
+@app.route("/edit_category/<int:category_id>", methods=["GET", "POST"])
+def edit_category(category_id):
+    #attempts to find the specified record, if no match returns a 404 error page.
+    category = Category.query.get_or_404(category_id) 
+    return render_template("edit_category.html", category=category)
