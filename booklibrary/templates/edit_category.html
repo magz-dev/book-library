@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h3>Add Category</h3>
+<h3>Edit Category</h3>
 
 <div class="">
-<form class="col s12" method="POST" action="{{ url_for('add_category') }}">
+<form class="col s12" method="POST" action="{{ url_for('edit_category') }}">
 <div class="row">
     <div class="form-outline">
         <input type="text" id="category_name" name="category_name" class="validate" required />
