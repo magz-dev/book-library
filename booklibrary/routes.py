@@ -10,6 +10,7 @@ def home():
     
 @app.route("/categories")
 def categories():
+    categories = Category.query.all()
     return render_template("categories.html")
 
 

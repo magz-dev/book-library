@@ -4,7 +4,7 @@ from booklibrary import db
 class Category(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     category_name = db.Column(db.String(20), unique=True, nullable=False)
-    books = db.relationship("Task", backref="category", cascade="all, delete")
+    books = db.relationship("Book", backref="category", cascade="all, delete", lazy=True)
  
     def __repr__(self):
         # represent itself in the form of a string
