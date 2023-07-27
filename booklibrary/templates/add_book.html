@@ -1,31 +1,58 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h3>Add Book</h3>
+<h3>Add New Books</h3>
 
 <div class="">
 <form class="col s12" method="POST" action="{{ url_for('add_book') }}">
+         <!-- Book name -->
+
 <div class="row">
     <div class="form-outline">
         <input type="text" id="book_title" name="book_title" class="validate" required />
         <label class="form-label" for="book_title">Book Name</label>
       </div>
 </div>
+         <!-- Book author -->
+
 <div class="row">
     <div class="form-outline">
         <input type="text" id="book_author" name="book_author" class="validate" required />
         <label class="form-label" for="book_author">Book Author</label>
       </div>
 </div>
+         <!-- Current status -->
+
 <div class="row">
     <div class="form-outline">
-        <input type="text" id="current_status" name="current_status" class="validate" required />
+        <input type="text" id="current_status" name="current_status" minlength="5" maxlength="25" class="validate" required />
         <label class="form-label" for="current_status">Current Status</label>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">Read</option>
+            <option value="2">Not Read</option>
+            <option value="3">Currently Reading</option>
+          </select>
       </div>
 </div>
+         <!-- Book category -->
+
+<div class="row">
+    <div class="form-outline">
+        <input type="text" id="category_id" name="category_id" class="validate" required />
+        <select id="category_id" name="category_id" class="validate" required>
+            <option value="" disabled selected>Choose Category</option>
+            {% for category in categories %}
+                <option value="{{ category.id }}">{{ category.category_name }}</option>
+            {% endfor %}
+        </select>
+        <label class="form-label" for="category_id">Category</label>
+      </div>
+</div>
+
 <div class="">
     <div>
-        <button type="submit" class="btn-lg btn-primary">Add</button>
+        <button type="submit" class="btn-lg btn-primary">Add Book</button>
     </div>
     
     </div>   
