@@ -47,7 +47,7 @@ def add_book():
     categories = list(Category.query.order_by(Category.category_name).all())
     if request.method == "POST":
         book = Book(
-            book_title=requrst.form.get("book_title"),
+            book_title=requrst.form.get("book_name"),
             book_author=request.form.get("book_author"),
             current_status=request.form.get("current_status"),
             category_id=request.form.get("category_id")
