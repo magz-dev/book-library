@@ -12,5 +12,9 @@
         </a>
     </div>
     </div>
-
+    <ul class="list-group">
+        {% for book in books %}
+        <li class="list-group-item">{{ task.task_name }}</li>
+        {% endfor %}
+      </ul>
     {% endblock %}

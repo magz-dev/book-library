@@ -42,18 +42,21 @@ def delete_category(category_id):
     return redirect(url_for("categories"))
 
 
-@app.route("/add_book", methods=["GET", "POST"])
-def add_book():
+@app.route("/add_book/<int:category_id>", methods=["GET", "POST"])
+def add_book(category_id):
+    category = Category.query.get_or_404(category_id)
     categories = list(Category.query.order_by(Category.category_name).all())
     if request.method == "POST":
         book = Book(
-            book_title=requrst.form.get("book_name"),
+            book_title=request.form.get("book_name"),
             book_author=request.form.get("book_author"),
             current_status=request.form.get("current_status"),
-            category_id=request.form.get("category_id")
+            category_id=request.form.get("category_id"),
+
         )
         db.session.add(book)
         db.session.add(category)
+
         db.session.commit()
         return redirect(url_for("home"))
     return render_template('add_book.html', categories=categories)
