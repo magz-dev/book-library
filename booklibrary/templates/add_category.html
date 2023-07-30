@@ -7,16 +7,14 @@
 <form class="col s12" method="POST" action="{{ url_for('add_category') }}">
 <div class="row">
     <div class="form-outline">
+        <label class="form-label" for="category_name">Category Name:</label>
         <input type="text" id="category_name" name="category_name" class="validate" required />
-        <label class="form-label" for="category_name">Category Name</label>
       </div>
 </div>
-<div class="">
     <div>
-        <button type="submit" class="btn-lg btn-primary">Add</button>
+        <button type="submit" class="btn btn-info">Add</button>
     </div>
     
-    </div>   
  </form>
 </div>
 {% endblock %}

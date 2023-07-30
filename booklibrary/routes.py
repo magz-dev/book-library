@@ -42,9 +42,9 @@ def delete_category(category_id):
     return redirect(url_for("categories"))
 
 
-@app.route("/add_book/<int:category_id>", methods=["GET", "POST"])
-def add_book(category_id):
-    category = Category.query.get_or_404(category_id)
+@app.route("/add_book", methods=["GET", "POST"])
+def add_book():
+           # category = Category.query.get_or_404(category_id)
     categories = list(Category.query.order_by(Category.category_name).all())
     if request.method == "POST":
         book = Book(
