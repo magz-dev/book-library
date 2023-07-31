@@ -44,7 +44,6 @@ def delete_category(category_id):
 
 @app.route("/add_book", methods=["GET", "POST"])
 def add_book():
-           # category = Category.query.get_or_404(category_id)
     categories = list(Category.query.order_by(Category.category_name).all())
     if request.method == "POST":
         book = Book(
@@ -60,4 +59,11 @@ def add_book():
         db.session.commit()
         return redirect(url_for("home"))
     return render_template('add_book.html', categories=categories)
+
+
+@app.route("/view_books", methods=["GET", "POST"])
+def view_books():
+    view_books = list(Book.query.order_by(Book.book_title).all())
+    return render_template("view_books.html", books=books)
+
     
