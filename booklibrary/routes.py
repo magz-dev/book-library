@@ -59,7 +59,7 @@ def add_book():
     return render_template('add_book.html', categories=categories)
 
 
-@app.route("/view_books", methods=["GET", "POST"])
+@app.route("/view_books")
 def view_books():
     books = list(Book.query.order_by(Book.book_title).all())
     return render_template("view_books.html", books=books)

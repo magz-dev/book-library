@@ -9,3 +9,15 @@ margin-top: 200px;
 
 .gp {margin-top: 30px;
 }
+
+body {
+    background-image: url('https://images2.minutemediacdn.com/image/upload/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/shape%2Fcover%2Fsport%2F559404-istock-512966920-0-50208d6d9cc4851b46f975a876f49814.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    overflow: hidden;
+
+
+
+}
