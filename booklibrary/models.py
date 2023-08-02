@@ -15,10 +15,10 @@ class Category(db.Model):
 class Book(db.Model):
     # schema for the book model
     id = db.Column(db.Integer, primary_key=True)
-    book_title = db.Column(db.String(45), unique=True, nullable=False)
-    book_author = db.Column(db.String(60), nullable=False)
+    book_title = db.Column(db.String, unique=True, nullable=False)
+    book_author = db.Column(db.String, nullable=False)
     book_description = db.Column(db.Text, nullable=False)
-    current_status = db.Column(db.String(15), nullable=False)
+    current_status = db.Column(db.String, nullable=False)
     category_id = db.Column(db.Integer, db.ForeignKey("category.id", ondelete="CASCADE"), nullable=False)
 
     def __repr__(self):
