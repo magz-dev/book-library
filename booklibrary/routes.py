@@ -2,6 +2,7 @@ from flask import render_template, request, redirect, url_for
 from booklibrary import app, db
 from booklibrary.models import Category, Book
 
+    # route
 
 @app.route("/")
 def home():
@@ -56,7 +57,7 @@ def add_book():
         )
         db.session.add(book)
         db.session.commit()
-        return redirect(url_for("home"))
+        return redirect(url_for("view_books"))
     return render_template('add_book.html', categories=categories)
 
 
