@@ -17,7 +17,7 @@ class Book(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     book_title = db.Column(db.String(50), unique=True, nullable=False)
     book_author = db.Column(db.String(30), nullable=False)
-    book_description = db.Column(db.Text, nullable=False)
+    book_description = db.Column(db.Text)
     current_status = db.Column(db.String(15), nullable=False)
     category_id = db.Column(db.Integer, db.ForeignKey("category.id", ondelete="CASCADE"), nullable=False)
 
