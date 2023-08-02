@@ -18,13 +18,13 @@
          <!-- Book author -->
          <div class="form-group">
             <label class="form-label" for="book_author"></label>
-        <input type="text" id="book_author" name="book_author" class="validate form-control" placeholder="Author" required />
+        <input type="text" id="book_author" name="book_author" minlength="4" maxlength="30" class="validate form-control" placeholder="Author" required />
      
 </div>
          <!-- Book description -->
          <div class="form-group">
             <label class="form-label" for="book_description"></label>
-        <textarea type="text" id="book_description" rows="2" minlength="10" name="book_description" class="validate form-control" placeholder="Description" required></textarea>
+        <textarea id="book_description" rows="2" minlength="8" maxlength="250" name="book_description" class="validate form-control" placeholder="Description" required></textarea>
       
 </div>
          <!-- Current status -->
