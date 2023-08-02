@@ -57,13 +57,13 @@ def add_book():
         )
         db.session.add(book)
         db.session.commit()
-        return redirect(url_for("view_books"))
+        return redirect(url_for("books"))
     return render_template('add_book.html', categories=categories)
 
 
-@app.route("/view_books")
-def view_books():
+@app.route("/books")
+def books():
     books = list(Book.query.order_by(Book.book_title).all())
-    return render_template("view_books.html", books=books)
+    return render_template("books.html", books=books)
 
     
