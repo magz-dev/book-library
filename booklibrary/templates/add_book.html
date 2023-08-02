@@ -4,15 +4,15 @@
 
 <div class="jumbotron jumbotron-fluid gp">
     <div class="container">
-      <h4 class="display-4">Add Books</h4>
+      <h4 class="display-4">Add books</h4>
   </div>
 </div>
-<div class="container-fluid" id="style">
+<div class="container-fluid style">
 <form method="POST" action="{{ url_for('add_book')}}">
          <!-- Book name -->
     <div class="form-group ">
         <label class="form-label" for="book_title"></label>
-        <input type="text" id="book_title" name="book_title" class="validate form-control" placeholder="Title"required>
+        <input type="text" id="book_title" name="book_title" class="validate form-control" placeholder="Title" required>
 
 </div>
          <!-- Book author -->
@@ -46,7 +46,7 @@
         </select>
 </div>
 
- <button class="btn btn-info gap" type="submit">Submit</button>
+ <button class="btn btn-info gap" type="submit"><strong>Submit</strong></button>
 
  </form>
 </div>

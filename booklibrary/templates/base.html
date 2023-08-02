@@ -25,16 +25,15 @@ rel="stylesheet"
           <a class="nav-link" href="{{url_for('categories')}}">Categories</a>
           <a class="nav-link" href="{{url_for('view_books')}}">Library</a>
           <a class="nav-link" href="{{url_for('add_book')}}">Add Books</a>
-          <a class="nav-link" href="{{url_for('add_category')}}">Add Category</a>
-
-
     </div>
     </div>
     </nav>
+
 <main class="container">
     {% block content %}
     {% endblock %}
 </main>
+
 <footer class="bg-light text-center text-lg-start">
   <!-- Copyright -->
   <div class="text-center fixed-bottom" style="background-color: rgba(250, 238, 238, 0.815);">
