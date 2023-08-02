@@ -2,21 +2,23 @@ from flask import render_template, request, redirect, url_for
 from booklibrary import app, db
 from booklibrary.models import Category, Book
 
-    # route
 
 @app.route("/")
-def home():
+def home(): 
+    # loading the home page
     return render_template("home.html")
 
 
 @app.route("/categories")
 def categories():
+    # displaying categories
     categories = list(Category.query.order_by(Category.category_name).all())
     return render_template("categories.html", categories=categories)
 
 
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    # creating new categories in database
     if request.method == "POST":
         category = Category(category_name=request.form.get("category_name"))
         db.session.add(category)
@@ -27,6 +29,7 @@ def add_category():
 
 @app.route("/edit_category/<int:category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+    # updating categories
     category = Category.query.get_or_404(category_id)
     if request.method == "POST":
         category.category_name = request.form.get("category_name")
@@ -37,6 +40,7 @@ def edit_category(category_id):
 
 @app.route("/delete_category/<int:category_id>")
 def delete_category(category_id):
+    # deleting categories
     category = Category.query.get_or_404(category_id)
     db.session.delete(category)
     db.session.commit()
@@ -45,6 +49,7 @@ def delete_category(category_id):
 
 @app.route("/add_book", methods=["GET", "POST"])
 def add_book():
+    # adding new books to database
     categories = list(Category.query.order_by(Category.category_name).all())
     if request.method == "POST":
         book = Book(
@@ -63,7 +68,6 @@ def add_book():
 
 @app.route("/books")
 def books():
+    # displaying books
     books = list(Book.query.order_by(Book.book_title).all())
     return render_template("books.html", books=books)
-
-    
