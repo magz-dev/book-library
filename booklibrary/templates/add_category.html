@@ -6,6 +6,9 @@
       <h3 class="display-4">Add Category</h3>
   </div>
 </div>
+
+    <!-- form for adding a new category -->
+
 <div class="container style">
 <form method="POST" action="{{ url_for('add_category') }}">
     <div class="form-group">
@@ -13,6 +16,9 @@
         <input type="text" id="category_name" name="category_name" minlength="4" class="validate form-control" placeholder="Category Name" required/>
 </div>
     <div>
+
+            <!-- 'Submit' button -->
+
         <button type="submit" class="btn btn-info gap"><strong>Submit</strong></button>
     </div>
     
