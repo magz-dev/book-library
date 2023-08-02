@@ -7,55 +7,47 @@
       <h4 class="display-4">Add Books</h4>
   </div>
 </div>
-<form class="col s12" method="POST" action="{{ url_for('add_book')}}">
+<div class="container-fluid" id="style">
+<form method="POST" action="{{ url_for('add_book')}}">
          <!-- Book name -->
-<div class="row gap">
-    <div class="form-outline">
-        <label class="form-label" for="book_title">Book Name:</label>
-        <input type="text" id="book_title" name="book_title" class="validate" required />
-      </div>
+    <div class="form-group ">
+        <label class="form-label" for="book_title"></label>
+        <input type="text" id="book_title" name="book_title" class="validate form-control" placeholder="Title"required>
+
 </div>
          <!-- Book author -->
-<div class="row">
-    <div class="form-outline">
-        <label class="form-label" for="book_author">Book Author:</label>
-        <input type="text" id="book_author" name="book_author" class="validate" required />
-      </div>
+         <div class="form-group">
+            <label class="form-label" for="book_author"></label>
+        <input type="text" id="book_author" name="book_author" class="validate form-control" placeholder="Author" required />
+     
 </div>
          <!-- Book description -->
- <div class="row">
-    <div class="form-outline">
-        <label class="form-label" for="book_description">Description:</label>
-        <input type="text" id="book_description" name="book_description" class="validate" required />
-      </div>
+         <div class="form-group">
+            <label class="form-label" for="book_description"></label>
+        <textarea id="book_description" name="book_description" class="validate form-control" placeholder="Description" rows="3" required></textarea>
+      
 </div>
          <!-- Current status -->
-<div class="row">
-    <div class="form-outline">
-        <select id="current_status" name="current_status" class="validate" required class="form-select" aria-label="Default select example">
+         <div class="form-group ">
+            <select id="current_status" name="current_status" class="validate form-control" required>
             <option selected>Current Status</option>
             <option value="1">Read</option>
             <option value="2">Not Read</option>
           </select>
-</div>
+
 </div>
          <!-- Book category -->
-<div class="row">
-    <div class="form-outline">
-        <select id="category_id" name="category_id" class="validate" required>
+         <div class="form-group">
+            <select id="category_id" name="category_id" class="validate form-control" required>
             <option value="" disabled selected>Choose Category</option>
             {% for category in categories %}
                 <option value="{{ category.id }}">{{ category.category_name }}</option>
             {% endfor %}
         </select>
-    </div>
 </div>
-<div class="row gp">
-    <div>
-        <button type="submit">Submit</button>
-    </div>
-    
-    </div>   
+
+ <button class="btn btn-info gap" type="submit">Submit</button>
+
  </form>
 </div>
 {% endblock %}
