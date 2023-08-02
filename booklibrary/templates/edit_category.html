@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h3>Edit Category</h3>
+<div class="jumbotron jumbotron-fluid gp">
+    <div class="container">
+      <h3 class="display-4">Edit Category</h3>
+  </div>
+</div>
+
 
 <div class="">
 <form class="col s12" method="POST" action="{{ url_for('edit_category', category_id=category.id) }}">

@@ -2,9 +2,11 @@
 {% block content %}
 
 
-<div class="container gp">
-<h3>Add New Books</h3>
-
+<div class="jumbotron jumbotron-fluid gp">
+    <div class="container">
+      <h4 class="display-4">Add Books</h4>
+  </div>
+</div>
 <form class="col s12" method="POST" action="{{ url_for('add_book')}}">
          <!-- Book name -->
 <div class="row gap">

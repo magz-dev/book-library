@@ -3,7 +3,8 @@ margin-top: 200px;
 }
 
 .gap {
-    margin-top: 10px;
+    margin: 10px auto;
+
 }
 
 
@@ -11,13 +12,19 @@ margin-top: 200px;
 }
 
 body {
-    background-image: url('https://images2.minutemediacdn.com/image/upload/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/shape%2Fcover%2Fsport%2F559404-istock-512966920-0-50208d6d9cc4851b46f975a876f49814.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    background-size: cover;
-    overflow: hidden;
+background-image: url('https://images2.minutemediacdn.com/image/upload/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/shape%2Fcover%2Fsport%2F559404-istock-512966920-0-50208d6d9cc4851b46f975a876f49814.jpg');
+background-size: cover;  
+background-position: center;
 
 
 
+}
+
+.container {
+    text-align: center;
+}
+
+.display {
+    display: inline-block;
+    
 }
