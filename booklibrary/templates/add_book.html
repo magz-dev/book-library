@@ -10,57 +10,58 @@
 
     <!-- form for adding a new book -->
 
-<div class="container-fluid style">
-<form method="POST" action="{{ url_for('add_book')}}">
-       
-    <!-- Book name -->
-
-    <div class="form-group gap ">
-        <label class="form-label" for="book_title"></label>
-        <input type="text" id="book_title" minlength="4" maxlength="50" name="book_title" class="validate form-control" placeholder="Title" required>
-
-    </div>
-
-         <!-- Book author -->
-
-         <div class="form-group">s
-            <label class="form-label" for="book_author"></label>
-        <input type="text" id="book_author" name="book_author" minlength="4" maxlength="60" class="validate form-control" placeholder="Author" required />
-     
-    </div>
-
-         <!-- Book description -->
-
-         <div class="form-group">
-            <label class="form-label" for="book_description"></label>
-        <textarea id="book_description" rows="2" minlength="8" maxlength="250" name="book_description" class="validate form-control" placeholder="Description" required></textarea>
-      
-    </div>
-
-         <!-- Current status -->
-
-         <div class="form-group ">
-            <select id="current_status" name="current_status" class="validate form-control" required>
-            <option selected>Current Status</option>
-            <option value="Read">Read</option>
-            <option value="Not Read">Not Read</option>
-          </select>
-    </div>
-         <!-- Book category -->
-
-         <div class="form-group">
-            <select id="category_id" name="category_id" class="validate form-control" required>
-            <option value="" disabled selected>Choose Category</option>
-            {% for category in categories %}
-                <option value="{{ category.id }}">{{ category.category_name }}</option>
-            {% endfor %}
-        </select>
-    </div>
-    
-    <!-- 'Submit' button -->
-
- <button class="btn btn-info gap" type="submit"><strong>Submit</strong></button>
-
- </form>
-</div>
-{% endblock %}
+    <div class="container-fluid style">
+        <form method="POST" action="{{ url_for('add_book')}}">
+               
+            <!-- Book name -->
+        
+            <div class="form-group ">
+                <label class="form-label" for="book_title"></label>
+                <input type="text" id="book_title" minlength="4" maxlength="50" name="book_title" class="validate form-control" placeholder="Title" required>
+        
+            </div>
+        
+                 <!-- Book author -->
+        
+                 <div class="form-group">
+                    <label class="form-label" for="book_author"></label>
+                <input type="text" id="book_author" name="book_author" minlength="4" maxlength="30" class="validate form-control" placeholder="Author" required />
+             
+            </div>
+        
+                 <!-- Book description -->
+        
+                 <div class="form-group">
+                    <label class="form-label" for="book_description"></label>
+                <textarea id="book_description" rows="2" minlength="8" maxlength="250" name="book_description" class="validate form-control" placeholder="Description" required></textarea>
+              
+            </div>
+        
+                 <!-- Current status -->
+        
+                 <div class="form-group ">
+                    <select id="current_status" name="current_status" class="validate form-control" required>
+                    <option selected>Current Status</option>
+                    <option value="Read">Read</option>
+                    <option value="Not Read">Not Read</option>
+                  </select>
+            </div>
+        
+                 <!-- Book category -->
+        
+                 <div class="form-group">
+                    <select id="category_id" name="category_id" class="validate form-control" required>
+                    <option value="" disabled selected>Choose Category</option>
+                    {% for category in categories %}
+                        <option value="{{ category.id }}">{{ category.category_name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <!-- 'Submit' button -->
+        
+         <button class="btn btn-info gap" type="submit"><strong>Submit</strong></button>
+        
+         </form>
+        </div>
+        {% endblock %}
