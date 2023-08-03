@@ -21,8 +21,15 @@
     <p class="mb-1"><strong>Description:</strong> {{ book.book_description }}</p>
 
     <p class="mb-1"><strong>Status:</strong> {{ book.current_status}}</p>
+    <p class="mb-1"><strong>Status:</strong> {{ book.category}}</p>
+
+
       </li>
         {% endfor %}
     </ol>
+    <div>
+      <a href="{{ url_for('edit_book', book_id=book.id)}}" class="btn btn-info btn-sm">Edit</a>
+
+    </div>
 </div>
     {% endblock %}

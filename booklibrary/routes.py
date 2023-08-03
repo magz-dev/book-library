@@ -62,7 +62,7 @@ def add_book():
         )
         db.session.add(book)
         db.session.commit()
-        return redirect(url_for("books"))
+        return redirect(url_for("home"))
     return render_template('add_book.html', categories=categories)
 
 
@@ -76,7 +76,7 @@ def books():
 @app.route("/edit_book/<int:book_id>", methods=["GET", "POST"])
 def edit_book(book_id):
     # editing new books to database
-    book = Book.query.get_or_404(task_id)
+    book = Book.query.get_or_404(book_id)
     categories = list(Book.query.order_by(Book.book_title).all())
     if request.method == "POST":
         book.book_title = request.form.get("book_title"),
@@ -85,6 +85,6 @@ def edit_book(book_id):
         book.current_status = request.form.get("current_status"),
         category_id = request.form.get("category_id"),
         db.session.commit()
-    return render_template('books.html', book=book, categories=categories)
+    return render_template('edit_book.html', book=book, categories=categories)
 
 
