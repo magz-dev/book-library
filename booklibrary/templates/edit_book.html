@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid gp">
+    <div class="container">
+      <h3 class="display-4">Edit Book</h3>
+  </div>
+</div>
+
+    <!-- Edit books -->
+    
+<div class="container style">
+        <form method="POST" action="{{ url_for('edit_book', category_id=category.id) }}">
+            <div class="form-group">
+                <label class="form-label" for="book_title"></label>
+                <input type="text" id="book_title" name="book_title" minlength="4" class="validate form-control" placeholder="Category Name" required/>
+        </div>
+ <div>
+
+    <!-- 'Submit' button -->
+
+<button type="submit" class="btn btn-info gap"><strong>Submit</strong></button>
+</div>
+
+ </form>
+</div>
+{% endblock %}

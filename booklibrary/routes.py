@@ -71,3 +71,20 @@ def books():
     # displaying books
     books = list(Book.query.order_by(Book.book_title).all())
     return render_template("books.html", books=books)
+
+
+@app.route("/edit_book/<int:book_id>", methods=["GET", "POST"])
+def edit_book(book_id):
+    # editing new books to database
+    book = Book.query.get_or_404(task_id)
+    categories = list(Book.query.order_by(Book.book_title).all())
+    if request.method == "POST":
+        book.book_title = request.form.get("book_title"),
+        book.book_author = request.form.get("book_author"),
+        book.book_description = request.form.get("book_description"),
+        book.current_status = request.form.get("current_status"),
+        category_id = request.form.get("category_id"),
+        db.session.commit()
+    return render_template('books.html', book=book, categories=categories)
+
+
