@@ -22,7 +22,6 @@ body {
 
 .container {
     text-align: center;
-    margin: auto;
 }
 
 .display {
@@ -44,6 +43,11 @@ body {
 
 }
 
+.style1 {
+    margin: auto;
+    height:50%;
+    width:50%;
+}
 
 
 h5 {
