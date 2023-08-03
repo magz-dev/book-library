@@ -62,7 +62,7 @@ def add_book():
         )
         db.session.add(book)
         db.session.commit()
-        return redirect(url_for("home"))
+        return redirect(url_for("books"))
     return render_template('add_book.html', categories=categories)
 
 
@@ -73,18 +73,11 @@ def books():
     return render_template("books.html", books=books)
 
 
-@app.route("/edit_book/<int:book_id>", methods=["GET", "POST"])
-def edit_book(book_id):
-    # editing new books to database
+@app.route("/delete_book/<int:book_id>")
+def delete_book(book_id):
+    # deleting categories
     book = Book.query.get_or_404(book_id)
-    categories = list(Book.query.order_by(Book.book_title).all())
-    if request.method == "POST":
-        book.book_title = request.form.get("book_title"),
-        book.book_author = request.form.get("book_author"),
-        book.book_description = request.form.get("book_description"),
-        book.current_status = request.form.get("current_status"),
-        category_id = request.form.get("category_id"),
-        db.session.commit()
-    return render_template('edit_book.html', book=book, categories=categories)
-
+    db.session.delete(book)
+    db.session.commit()
+    return redirect(url_for("books"))
 

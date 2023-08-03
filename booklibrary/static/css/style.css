@@ -34,10 +34,23 @@ body {
     margin: auto;
     height:50%;
     width:50%;
-    background-color: rgba(37, 32, 32, 0.7)
+    background-color: rgba(64, 64, 64, 0.7)
 }
 
 
-h6, p {
-    text-align: left;
+  h4, h3, h1 {
+    color: rgb(89, 89, 89);
+
+}
+
+
+
+h5 {
+   color: rgb(8, 148, 153);
+
+    text-transform: capitalize;
+}
+
+p {
+text-align: left;
 }
