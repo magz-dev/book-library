@@ -8,9 +8,10 @@
   </div>
 </div>
 
-    <!-- form for adding a new book -->
+    <!-- form for adding new books -->
 
     <div class="container-fluid style">
+
         <form method="POST" action="{{ url_for('add_book')}}">
                
             <!-- Book name -->
@@ -63,5 +64,6 @@
          <button class="btn btn-info gap" type="submit"><strong>Submit</strong></button>
         
          </form>
+        </div>
         </div>
         {% endblock %}
