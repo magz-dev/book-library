@@ -21,29 +21,39 @@
 <body>
 
   <!-- navbar -->
-  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <nav class="navbar navbar-light navbar-1 bg-light">
+     <!-- Navbar brand -->
+  <a class="navbar-brand" href="{{url_for('home')}}">Home</a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+    aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+   
+    <div class="collapse navbar-collapse" id="navbarSupportedContent15">
     <ul class="navbar-nav mr-auto">
 
-      <li class="nav-item mr-2"><a class="nav-link " aria-current="page" href="{{url_for('home')}}">Home</a></li>
-      <li class="nav-item mr-2"><a class="nav-link" href="{{url_for('categories')}}">Categories</a></li>
-      <li class="nav-item mr-2"><a class="nav-link" href="{{url_for('books')}}">Library</a></li>
-      <li class="nav-item mr-2"><a class="nav-link" href="{{url_for('add_book')}}">Add Books</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{url_for('categories')}}">Categories</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{url_for('books')}}">Library</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{url_for('add_book')}}">Add Books</a></li>
+
     </ul>
+    </div>
   </nav>
 
 <main class="container">
     {% block content %}
     {% endblock %}
 </main>
-
+<div class="container-fluid">
 <footer class="text-center">
 
   <!-- Footer -->
 
-  <div class="text-center fixed-bottom" style="background-color: rgba(250, 238, 238, 0.815);">
+  <div class="text-center fixed-bottom" style="background-color: rgba(250, 238, 238, 0.715);">
     © 2023 Copyright: MagzDev
   </div>
 </footer>
+</div>
 </body>
 <!-- Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
