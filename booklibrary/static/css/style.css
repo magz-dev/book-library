@@ -37,6 +37,12 @@ body {
     background-color: rgba(64, 64, 64, 0.7)
 }
 
+.style1 {
+    margin: auto;
+    height:50%;
+    width:50%;
+    background-color: rgba(64, 64, 64, 0.7)
+}
 
   h4, h3, h1 {
     color: rgb(89, 89, 89);

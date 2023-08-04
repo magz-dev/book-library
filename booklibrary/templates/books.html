@@ -7,7 +7,7 @@
 
        <!-- 'add books' button -->
 
-      <a class="btn btn-info btn-lg gp" href="{{ url_for('add_book') }}" role="button"><strong>Add Books</strong></a>  </div>
+      <a class="btn btn-info btn-lg gp" href="{{ url_for('add_book') }}" role="button"><strong>Add Books</strong></a>
 
   </div>
 </div>
@@ -21,7 +21,7 @@
       <div class="card" style="width: 18rem;">
           <div class="card-body">
 
-            <h4 class="card-title"><strong>{{ book.book_title }}</strong></h4>
+            <h5 class="card-title"><strong>{{ book.book_title }}</strong></h5>
             <p class="card-text"><strong>Author:</strong>  {{ book.book_author}}</p>
             <p class="card-text"><strong>Description:</strong> {{ book.book_description }}</p>
             <p class="card-text"><strong>Status:</strong> {{ book.current_status }}</p>
