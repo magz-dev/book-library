@@ -91,11 +91,12 @@ The PEP8 checker, W3C Markup Validator and W3C CSS Validator Services were used 
 ## Credits
 ### Code
 * Bootstrap 4 - Bootstrap Library used throughout the project to add style. Bootstrap 4 was also used to make the site responsive by using the Bootstrap Grid System.
-* [W3Schools]((https://www.w3schools.com/default.asp))
+* [W3Schools](https://www.w3schools.com/default.asp)
 * Code Institute's learning content
   
 ### Media
 * The background photo was taken from a non-copyrighted google image search.
+* Favicon was taken from [Icons8](https://icons8.com/).
 
 ### Acknowledgements
 * Tutor support from the Code Institute.
