@@ -1,5 +1,5 @@
 # Book Library 
-   [View the life project here.](https://book-library-2e28b631fcb4.herokuapp.com/)
+   [View the live project here](https://book-library-2e28b631fcb4.herokuapp.com/)
 
 The aim of this web application is simply to provide the user a site whereby they can view an online record of their book library. The user can upload books they have purchaed or read and update the status of what categories of books they are interested in, own, and are seeking to read. This online library is designed to be an accesible and easy to use library to help keep track of your books through categories and descriptions. 
 
